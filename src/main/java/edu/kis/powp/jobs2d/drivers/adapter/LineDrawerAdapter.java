@@ -5,7 +5,7 @@ import edu.kis.legacy.drawer.shape.ILine;
 import edu.kis.legacy.drawer.shape.LineFactory;
 import edu.kis.powp.jobs2d.Job2dDriver;
 
-public class LineDrawerAdapter extends DrawPanelController implements Job2dDriver {
+public class LineDrawerAdapter implements Job2dDriver {
     private int startX = 0, startY = 0;
 
     private ILine currentLine;
@@ -34,7 +34,6 @@ public class LineDrawerAdapter extends DrawPanelController implements Job2dDrive
         currentLine.setStartCoordinates(this.startX, this.startY);
         currentLine.setEndCoordinates(x, y);
         setPosition(x,y);
-        drawLine(currentLine);
         dpc.drawLine(currentLine);
     }
 
