@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import command.*;
 import edu.kis.legacy.drawer.panel.DefaultDrawerFrame;
 import edu.kis.legacy.drawer.panel.DrawPanelController;
 import edu.kis.legacy.drawer.shape.line.SpecialLine;
@@ -35,6 +36,19 @@ public class TestJobs2dPatterns {
 		application.addTest("Figure Joe 1", selectTestFigureOptionListener);
 		application.addTest("Figure Joe 2", e -> FiguresJoe.figureScript2(DriverFeature.getDriverManager().getCurrentDriver()));
 		application.addTest("Figure Joe 3", figuresJaneAdapter);
+
+		application.addTest("Figure Joe 4", e -> {
+			ComplexCommand commands = FiguresFactory.rectangle(DriverFeature.getDriverManager().getCurrentDriver());
+			commands.execute();
+		});
+		application.addTest("Figure Joe 5", e -> {
+			ComplexCommand commands = FiguresFactory.weridFigure(DriverFeature.getDriverManager().getCurrentDriver());
+			commands.execute();
+		});
+		application.addTest("Figure Joe 6", e -> {
+			ComplexCommand commands = FiguresFactory.triangle(DriverFeature.getDriverManager().getCurrentDriver());
+			commands.execute();
+		});
 	}
 
 	/**
