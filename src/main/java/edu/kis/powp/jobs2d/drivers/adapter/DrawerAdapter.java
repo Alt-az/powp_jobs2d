@@ -13,6 +13,8 @@ public class DrawerAdapter implements Job2dDriver {
 
 	private final DrawPanelController dpc;
 
+
+
 	public DrawerAdapter(DrawPanelController dpc) {
 		super();
 		this.dpc = dpc;
