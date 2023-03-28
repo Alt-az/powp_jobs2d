@@ -14,8 +14,8 @@ public class FiguresJaneAdapter extends AbstractDriver implements ActionListener
     }
 
     @Override
-    public void operateTo(int i, int i1) {
-        DriverFeature.getDriverManager().getCurrentDriver().operateTo(i,i1);
+    public void operateTo(int x, int y) {
+        DriverFeature.getDriverManager().getCurrentDriver().operateTo(x,y);
     }
 
 
